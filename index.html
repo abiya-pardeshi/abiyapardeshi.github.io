@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abiya Pardeshi — Data Analyst</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- Grid Background -->
+  <div class="grid-bg"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">AP<span class="dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+      <li><a href="#experience" onclick="closeMobileMenu()">Experience</a></li>
+      <li><a href="#skills" onclick="closeMobileMenu()">Skills</a></li>
+      <li><a href="#work" onclick="closeMobileMenu()">Work</a></li>
+      <li><a href="#research" onclick="closeMobileMenu()">Research</a></li>
+      <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-eyebrow">
+      <span class="status-dot"></span>
+      <span>Available for opportunities</span>
+    </div>
+
+    <div class="hero-main">
+      <div class="hero-tag">Jr. Data Analyst · Goa, India</div>
+      <h1 class="hero-name">
+        <span class="line" data-text="Abiya">Abiya</span>
+        <span class="line italic" data-text="Pardeshi">Pardeshi</span>
+      </h1>
+      <p class="hero-sub">
+        Turning raw data into decisions — from Azure pipelines to Power BI dashboards, GA4 tracking to published ML research.
+      </p>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num" data-target="1.8">0</span>
+        <span class="stat-unit">+ yrs</span>
+        <span class="stat-label">Experience</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="20">0</span>
+        <span class="stat-unit">+</span>
+        <span class="stat-label">Dashboards</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="5">0</span>
+        <span class="stat-unit">+</span>
+        <span class="stat-label">Data Sources</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="1">0</span>
+        <span class="stat-unit"></span>
+        <span class="stat-label">Publication</span>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span>Scroll to explore</span>
+      <div class="scroll-line"></div>
+    </div>
+
+    <!-- Decorative data viz element -->
+    <div class="hero-viz">
+      <canvas id="heroCanvas"></canvas>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section about" id="about">
+    <div class="section-label">01 / About</div>
+    <div class="about-grid">
+      <div class="about-left">
+        <h2 class="section-title">The person <em>behind</em> the pipeline</h2>
+        <div class="about-card">
+          <div class="about-card-inner">
+            <div class="about-initials">AP</div>
+            <div class="about-info">
+              <div class="about-name">Abiya Pardeshi</div>
+              <div class="about-role">Jr. Data Analyst @ Kilowott</div>
+              <div class="about-badges">
+                <span class="badge">Power BI</span>
+                <span class="badge">Azure</span>
+                <span class="badge">GA4</span>
+                <span class="badge">GTM</span>
+                <span class="badge">Python</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-right">
+        <p class="about-text">
+          I'm a Data Analyst with <strong>1.8+ years of experience</strong> building end-to-end data solutions — from architecting Azure ETL pipelines to shipping production-ready BI dashboards and implementing server-side tracking at scale.
+        </p>
+        <p class="about-text">
+          At Kilowott, I work at the intersection of engineering and strategy — being the person who connects technical implementation with real business questions. Whether that's debugging a tracking gap that's skewing conversion data, or sitting with a marketing team to understand what they actually need from a report.
+        </p>
+        <p class="about-text">
+          Beyond analytics, I have a foundation in <strong>NLP and deep learning</strong> from published academic research — my work on cryptocurrency price prediction was published in <em>Springer Nature (2025)</em>.
+        </p>
+        <div class="about-links">
+          <a href="mailto:abiyapardeshi05@gmail.com" class="link-pill">✉ Email Me</a>
+          <a href="https://linkedin.com/in/abiya-pardeshi" target="_blank" class="link-pill">🔗 LinkedIn</a>
+          <a href="#" class="link-pill download-cv">↓ Download CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section experience" id="experience">
+    <div class="section-label">02 / Experience</div>
+    <h2 class="section-title">Where I've <em>worked</em></h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item active" data-index="0">
+        <div class="timeline-meta">
+          <span class="timeline-date">Jul 2024 — Present</span>
+          <span class="timeline-type">Full-time</span>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3>Jr. Data Analyst</h3>
+            <div class="timeline-company">Kilowott — Nordic Intent HQ</div>
+            <div class="timeline-location">Porvorim, Goa</div>
+          </div>
+          <div class="timeline-achievements">
+            <div class="achievement">
+              <div class="achievement-icon">⚡</div>
+              <div>
+                <strong>Azure ETL Pipelines</strong> — Architected end-to-end data pipelines integrating marketing, sales, and email datasets from Azure into Power BI across 5+ data sources, cutting manual consolidation time by ~40%.
+              </div>
+            </div>
+            <div class="achievement">
+              <div class="achievement-icon">📊</div>
+              <div>
+                <strong>Dashboard Development</strong> — Built and deployed 20+ interactive dashboards in Power BI and Looker Studio tracking campaign KPIs, user funnel metrics, and conversion trends.
+              </div>
+            </div>
+            <div class="achievement">
+              <div class="achievement-icon">🏷️</div>
+              <div>
+                <strong>GA4 & GTM Implementation</strong> — Implemented server-side and browser-side GTM tracking across client websites, capturing 100% of user interaction events with validated data accuracy.
+              </div>
+            </div>
+            <div class="achievement">
+              <div class="achievement-icon">🔗</div>
+              <div>
+                <strong>Cross-functional Bridge</strong> — Technical liaison between development and marketing teams, translating complex measurement requirements into reliable, scalable tracking configurations.
+              </div>
+            </div>
+            <div class="achievement">
+              <div class="achievement-icon">✅</div>
+              <div>
+                <strong>Data Quality & Governance</strong> — Established validation frameworks and QA protocols, reducing reporting discrepancies by an estimated 30%.
+              </div>
+            </div>
+          </div>
+          <div class="timeline-tags">
+            <span>Azure</span><span>Power BI</span><span>Looker Studio</span><span>GA4</span><span>GTM</span><span>SQL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-index="1">
+        <div class="timeline-meta">
+          <span class="timeline-date">Aug 2023 — Sep 2023</span>
+          <span class="timeline-type">Internship</span>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3>Software Engineering Intern</h3>
+            <div class="timeline-company">Sierra Circuits India Pvt. Ltd.</div>
+            <div class="timeline-location">Verna, Goa</div>
+          </div>
+          <div class="timeline-achievements">
+            <div class="achievement">
+              <div class="achievement-icon">🤖</div>
+              <div>
+                <strong>NLP Model Development</strong> — Engineered QA and Text Generation models using BERT and GPT-2 via Hugging Face Transformers, achieving measurable accuracy improvements on domain-specific data.
+              </div>
+            </div>
+            <div class="achievement">
+              <div class="achievement-icon">🔧</div>
+              <div>
+                <strong>Model Optimization</strong> — Conducted systematic hyperparameter tuning and iterative evaluation using deep learning frameworks, improving baseline model performance.
+              </div>
+            </div>
+            <div class="achievement">
+              <div class="achievement-icon">📝</div>
+              <div>
+                <strong>Technical Documentation</strong> — Produced structured technical documentation covering methodology, experimental results, and model insights.
+              </div>
+            </div>
+          </div>
+          <div class="timeline-tags">
+            <span>Python</span><span>BERT</span><span>GPT-2</span><span>HuggingFace</span><span>NLP</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section skills" id="skills">
+    <div class="section-label">03 / Skills</div>
+    <h2 class="section-title">The <em>toolkit</em></h2>
+
+    <div class="skills-grid">
+
+      <div class="skill-card">
+        <div class="skill-card-icon">🏗️</div>
+        <h3>Data Engineering</h3>
+        <ul>
+          <li>Azure Data Integration</li>
+          <li>ETL Pipeline Design</li>
+          <li>Data Modeling</li>
+          <li>SQL</li>
+          <li>Data Validation & QA</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-icon">📈</div>
+        <h3>Visualization & BI</h3>
+        <ul>
+          <li>Power BI</li>
+          <li>Looker Studio</li>
+          <li>Dashboard Design</li>
+          <li>KPI Reporting</li>
+          <li>Automated Storytelling</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-icon">🌐</div>
+        <h3>Web Analytics</h3>
+        <ul>
+          <li>Google Analytics 4</li>
+          <li>Google Tag Manager</li>
+          <li>Server-Side Tracking</li>
+          <li>Conversion Tracking</li>
+          <li>Event Validation</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-icon">💻</div>
+        <h3>Programming</h3>
+        <ul>
+          <li>Python (Pandas, NumPy)</li>
+          <li>ML / NLP</li>
+          <li>R</li>
+          <li>SQL</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-icon">📣</div>
+        <h3>Marketing Platforms</h3>
+        <ul>
+          <li>Google Ads</li>
+          <li>Meta Ads</li>
+          <li>Snapchat Ads</li>
+          <li>Klaviyo</li>
+          <li>Cross-channel Attribution</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-icon">🛍️</div>
+        <h3>CMS & Platforms</h3>
+        <ul>
+          <li>WordPress</li>
+          <li>Shopify</li>
+          <li>HubSpot</li>
+          <li>Analytics Integration</li>
+          <li>E-commerce Tracking</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Proficiency bars -->
+    <div class="proficiency">
+      <h3 class="proficiency-title">Core Proficiencies</h3>
+      <div class="bars">
+        <div class="bar-row">
+          <span>Power BI / Looker Studio</span>
+          <div class="bar-track"><div class="bar-fill" data-width="95"></div></div>
+          <span class="bar-pct">95%</span>
+        </div>
+        <div class="bar-row">
+          <span>Azure / ETL Pipelines</span>
+          <div class="bar-track"><div class="bar-fill" data-width="88"></div></div>
+          <span class="bar-pct">88%</span>
+        </div>
+        <div class="bar-row">
+          <span>GA4 & GTM</span>
+          <div class="bar-track"><div class="bar-fill" data-width="92"></div></div>
+          <span class="bar-pct">92%</span>
+        </div>
+        <div class="bar-row">
+          <span>Python / ML</span>
+          <div class="bar-track"><div class="bar-fill" data-width="80"></div></div>
+          <span class="bar-pct">80%</span>
+        </div>
+        <div class="bar-row">
+          <span>SQL</span>
+          <div class="bar-track"><div class="bar-fill" data-width="85"></div></div>
+          <span class="bar-pct">85%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work / Projects -->
+  <section class="section work" id="work">
+    <div class="section-label">04 / Work</div>
+    <h2 class="section-title">Key <em>achievements</em></h2>
+
+    <div class="work-grid">
+
+      <div class="work-card">
+        <div class="work-card-num">01</div>
+        <div class="work-card-content">
+          <div class="work-impact">~40% time saved</div>
+          <h3>Centralized Azure–Power BI Pipeline</h3>
+          <p>Architected and maintained end-to-end ETL pipelines integrating marketing, sales, and email datasets from Azure into Power BI — enabling real-time decision-making for the marketing team across 5+ data sources.</p>
+          <div class="work-tags">
+            <span>Azure</span><span>ETL</span><span>Power BI</span><span>SQL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="work-card">
+        <div class="work-card-num">02</div>
+        <div class="work-card-content">
+          <div class="work-impact">100% event capture</div>
+          <h3>Server-Side GTM Implementation</h3>
+          <p>Implemented server-side and browser-side GTM tracking across client websites, eliminating data gaps caused by ad-blockers and browser restrictions — achieving 100% event capture accuracy with validated data quality.</p>
+          <div class="work-tags">
+            <span>GTM</span><span>GA4</span><span>Server-Side</span><span>JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="work-card">
+        <div class="work-card-num">03</div>
+        <div class="work-card-content">
+          <div class="work-impact">20+ dashboards</div>
+          <h3>Multi-Platform BI Dashboards</h3>
+          <p>Delivered 20+ interactive dashboards tracking campaign KPIs, funnel metrics, and conversion trends across Google, Meta, Snapchat, and Klaviyo — enabling centralized cross-channel performance visibility.</p>
+          <div class="work-tags">
+            <span>Power BI</span><span>Looker Studio</span><span>KPI</span><span>Meta Ads</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="work-card">
+        <div class="work-card-num">04</div>
+        <div class="work-card-content">
+          <div class="work-impact">~30% fewer errors</div>
+          <h3>Data Quality Framework</h3>
+          <p>Established data validation frameworks and quality assurance protocols ensuring integrity of all ingested data before visualization, reducing reporting discrepancies by an estimated 30%.</p>
+          <div class="work-tags">
+            <span>Data Quality</span><span>Governance</span><span>Validation</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Research / Certifications -->
+  <section class="section research" id="research">
+    <div class="section-label">05 / Research & Certs</div>
+    <h2 class="section-title">Beyond the <em>day job</em></h2>
+
+    <div class="research-grid">
+      <div class="research-publication">
+        <div class="pub-badge">Peer Reviewed</div>
+        <div class="pub-journal">Springer Nature · January 2025</div>
+        <h3 class="pub-title">"Optimized Deep Learning Framework for Cryptocurrency Price Prediction"</h3>
+        <p class="pub-desc">Published as a final-year undergraduate, this research demonstrates advanced applied ML skills. Vol. 6, Article No. 67.</p>
+        <div class="pub-meta">
+          <span>Deep Learning</span>
+          <span>Time Series</span>
+          <span>Cryptocurrency</span>
+          <span>NLP</span>
+        </div>
+      </div>
+
+      <div class="certifications">
+        <h3>Certifications</h3>
+        <div class="cert-list">
+          <div class="cert-item">
+            <div class="cert-logo google">G</div>
+            <div>
+              <div class="cert-name">Google Data Analytics Professional</div>
+              <div class="cert-issuer">Coursera · 2026</div>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-logo udemy">U</div>
+            <div>
+              <div class="cert-name">Advanced GA4 Implementation with GTM</div>
+              <div class="cert-issuer">Udemy · 2025</div>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-logo java">J</div>
+            <div>
+              <div class="cert-name">Object-Oriented Programming in Java</div>
+              <div class="cert-issuer">Libra Computers · 2023</div>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-logo python">P</div>
+            <div>
+              <div class="cert-name">Python Programming</div>
+              <div class="cert-issuer">Libra Computers · 2023</div>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-logo nptel">N</div>
+            <div>
+              <div class="cert-name">Entrepreneurship</div>
+              <div class="cert-issuer">NPTEL · Oct 2022</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="education">
+      <div class="edu-icon">🎓</div>
+      <div class="edu-content">
+        <div class="edu-degree">Bachelor of Engineering — Computer Engineering</div>
+        <div class="edu-school">Agnel Institute of Technology and Design, Mapusa, Goa</div>
+        <div class="edu-meta">
+          <span>Sep 2020 – Jul 2024</span>
+          <span class="edu-cgpa">CGPA: 8.1 / 10</span>
+        </div>
+        <div class="edu-courses">DB Systems · Machine Learning · Data Structures · Algorithms · Statistics</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact" id="contact">
+    <div class="section-label">06 / Contact</div>
+    <div class="contact-inner">
+      <h2 class="contact-title">Let's build something <em>meaningful</em></h2>
+      <p class="contact-sub">Open to full-time roles, freelance projects, or just a good conversation about data.</p>
+
+      <div class="contact-options">
+        <a href="mailto:abiyapardeshi05@gmail.com" class="contact-card email-card">
+          <div class="contact-card-icon">✉</div>
+          <div>
+            <div class="contact-card-label">Email</div>
+            <div class="contact-card-value">abiyapardeshi05@gmail.com</div>
+          </div>
+          <div class="contact-card-arrow">→</div>
+        </a>
+
+        <a href="tel:+918805780825" class="contact-card phone-card">
+          <div class="contact-card-icon">📞</div>
+          <div>
+            <div class="contact-card-label">Phone</div>
+            <div class="contact-card-value">+91 8805780825</div>
+          </div>
+          <div class="contact-card-arrow">→</div>
+        </a>
+
+        <a href="https://linkedin.com/in/abiya-pardeshi" target="_blank" class="contact-card linkedin-card">
+          <div class="contact-card-icon">🔗</div>
+          <div>
+            <div class="contact-card-label">LinkedIn</div>
+            <div class="contact-card-value">Abiya Pardeshi</div>
+          </div>
+          <div class="contact-card-arrow">→</div>
+        </a>
+      </div>
+
+      <div class="contact-location">
+        <span>📍</span>
+        <span>Based in Goa, India · Open to remote</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-left">
+      <span class="footer-logo">AP<span class="dot">.</span></span>
+      <span>© 2025 Abiya Pardeshi</span>
+    </div>
+    <div class="footer-right">
+      <span>Built with purpose. Powered by data.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
