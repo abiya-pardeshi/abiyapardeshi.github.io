@@ -328,12 +328,3 @@ document.querySelectorAll('.skill-card').forEach(card => {
   });
 });
 
-// ===== DOWNLOAD CV (placeholder) =====
-const downloadBtn = document.querySelector('.download-cv');
-if (downloadBtn) {
-  downloadBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    // Replace 'resume.pdf' with actual path when deployed
-    alert('CV download will be enabled once deployed with your PDF file.\nReplace the href with your actual resume PDF path.');
-  });
-}
